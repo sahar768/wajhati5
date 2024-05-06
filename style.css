@@ -1,0 +1,1167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Lato', sans-serif;
+}
+
+   
+:root{
+    
+    --towColor: #3f8b48;
+  }
+
+
+  /* لي التسجيل الدخول و التسجيل */
+  #verify-btn,
+        #otp{
+            display: none;
+        }
+
+
+      /*الزر */
+        .style-btn {
+          padding: 1em 1em;
+          border: none;
+          border-radius: 5px;
+          font-weight: bold;
+          letter-spacing: 3px;
+          cursor: pointer;
+          color: var(--towColor);
+          transition: all 1000ms;
+          font-size: 15px;
+          position: relative;
+          overflow: hidden;
+          outline: 2px solid var(--towColor);
+          margin: 20px;
+          text-decoration: none;
+          padding: 10px;
+          background: rgb(248, 251, 252);
+        }
+        
+        .style-btn:hover {
+          color: #ffffff;
+          transform: scale(1.1);
+          outline: 2px solid var(--towColor);
+          box-shadow: 4px 5px 17px -4px var(--towColor);
+        }
+        
+        .style-btn::before {
+          content: "";
+          position: absolute;
+          left: -50px;
+          top: 0;
+          width: 0;
+          height: 100%;
+          background-color: var(--towColor);
+          transform: skewX(45deg);
+          z-index: -1;
+          transition: width 1000ms;
+        }
+        
+        .style-btn:hover::before {
+          width: 250%;
+        }
+        
+      
+/* Navbar Start */
+
+header{
+    position: fixed;
+    top: 0 ;
+    left: 0;
+    right: 0;
+    z-index: 4;
+
+}
+#navbar{
+    background:  #f9f9f9;
+   
+}
+#logo{
+    font-size: 36px;
+    color: black;
+    text-shadow: 0px 1px 1px black;
+    margin-bottom: 5px;
+}
+
+.navbar-toggler span{
+    color: var(--towColor);
+}
+.navbar-nav{
+    margin-left: 20px;
+}
+.nav-item .nav-link{
+    font-size: 16px;
+    font-weight: 550;
+    color: black;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    transition: 0.5s ease;
+}
+.nav-item .nav-link:hover{
+    background: var(--towColor);
+    color: white;
+    border-radius: 5px;
+    box-shadow: 4px 5px 17px -4px var(--towColor);
+}
+#navbar form button{
+    background: var(--towColor);
+    color: white;
+    border: none;
+}
+
+/* Navbar End */
+
+
+
+
+
+
+
+/* Home Section Start home.html  */
+.home{
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+}
+
+.home .content{
+  text-align: center;
+  padding-top: 200px;
+  width: 100%;
+  height: 90vh;
+ 
+  align-items: center;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.main-txt h1{
+  text-align: center;
+    margin: 30px 0;
+    font-weight: 600;
+    color: #e9ecef;
+}
+
+.bg-video{
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.home .content h5{
+  color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 0px 1px 1px black;
+    margin: 20px;
+    letter-spacing: 5px;
+}
+.home .content h1{
+  color: white;
+  font-size: 70px;
+  font-weight: 550;
+  text-shadow: 0px 1px 1px black;
+  margin-top: 5px;
+}
+.changecontent::after{
+  content: ' ';
+  color: var(--towColor);
+  text-shadow: 0px 1px 1px black;
+  animation: changetext 10s infinite linear;
+}
+@keyframes changetext{
+  0%{content: "Mecca";}
+  10%{content: "Riyadh";}
+  20%{content: "Jeddah";}
+  30%{content: "Abha";}
+  40%{content: "Mecca";}
+  50%{content: "Riyadh";}
+  60%{content: "Jeddah";}
+  70%{content: "Abha";}
+  80%{content: "Mecca";}
+  90%{content: "Riyadh";}
+  100%{content: "Jeddah";}
+} 
+.home .content p{
+  color: rgb(222, 230, 233);
+  font-size: 15px;
+  font-weight: 700;
+  text-shadow: 0px 1px 1px black;
+  margin: 20px 40px;
+}
+.home .content a{
+  padding: 10px;
+  background: rgb(248, 251, 252);
+  letter-spacing: 2px;
+  font-weight: 550;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
+@media (max-width:850px){
+  .home{
+      background-position: 50%;
+  }
+}
+@media (max-width:450px){
+  .home .content h5{
+      font-size: 25px;
+  }
+  .home .content h1{
+      font-size: 38px;
+  }
+  .home .content p{
+      font-size: 13px;
+  }
+}
+/* Home Section End  home.html*/
+
+
+
+
+
+/* About Section Start home.html*/
+.about{
+  margin:50px 0 30px ;
+  height: 500px;
+
+}
+.about h1{
+  margin-bottom: -20px;
+}
+
+.about .card{
+  border-radius: 10px;
+}
+.about .card img{
+  border-radius: 10px;
+}
+.about h2{
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--towColor);
+  text-align: center;
+}
+.about p{
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  margin-top: 13px;
+  text-align: center;
+}
+
+@media (max-width:765px){
+  .about{
+      padding: 0;
+      margin-bottom: 300px;
+  }
+}
+
+/* About Section End  home.html*/
+
+
+/*Overview of places Section Start*/
+#places{
+height:700px;
+background-color: #212428;
+margin: 30px 0 15px;
+}
+
+
+/*Overview of places Section End/
+
+/* Weather Section Start home.html*/
+
+.Weathe h1 {
+  background: var(--towColor);
+  font-size: 1.75rem;
+  text-align: center;
+  padding: 18px 0;
+  color: #fff;
+}
+.container-Weather{
+  display: flex;
+  gap: 35px;
+  padding: 30px;
+}
+.weather-input {
+  width: 550px;
+}
+.weather-input input {
+  height: 46px;
+  width: 100%;
+  outline: none;
+  font-size: 1.07rem;
+  padding: 0 17px;
+  margin: 10px 0 20px 0;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+.weather-input input:focus {
+  padding: 0 16px;
+  border: 2px solid var(--towColor);
+}
+.weather-input .separator {
+  height: 1px;
+  width: 100%;
+  margin: 25px 0;
+  background: #BBBBBB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.weather-input .separator::before{
+  content: "or";
+  color: #6C757D;
+  font-size: 1.18rem;
+  padding: 0 15px;
+  margin-top: -4px;
+  background: #E3F2FD;
+}
+.weather-input button {
+  width: 100%;
+  padding: 10px 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #fff;
+  background: var(--towColor);
+  transition: 0.2s ease;
+}
+.weather-input .search-btn:hover {
+  background: #13511a;
+}
+.weather-input .location-btn {
+  background: #6C757D;
+}
+.weather-input .location-btn:hover {
+  background: #5c636a;
+}
+.weather-data {
+  width: 100%;
+}
+.weather-data .current-weather {
+  color: #fff;
+  background: var(--towColor);
+  border-radius: 5px;
+  padding: 20px 70px 20px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.current-weather h2 {
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+.weather-data h6 {
+  margin-top: 12px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.current-weather .icon {
+  text-align: center;
+}
+.current-weather .icon img {
+  max-width: 120px;
+  margin-top: -15px;
+}
+.current-weather .icon h6 {
+  margin-top: -10px;
+  text-transform: capitalize;
+}
+.days-forecast h2 {
+  margin: 20px 0;
+  font-size: 1.5rem;
+}
+.days-forecast .weather-cards {
+  display: flex;
+  gap: 20px;
+}
+.weather-cards .card {
+  color: #fff;
+  padding: 18px 16px;
+  list-style: none;
+  width: calc(100% / 5);
+  background: #6C757D;
+  border-radius: 5px;
+}
+.weather-cards .card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+.weather-cards .card img {
+  max-width: 70px;
+  margin: 5px 0 -12px 0;
+}
+
+@media (max-width: 1400px) {
+  .weather-data .current-weather {
+    padding: 20px;
+  }
+  .weather-cards {
+    flex-wrap: wrap;
+  }
+  .weather-cards .card {
+    width: calc(100% / 4 - 15px);
+  }
+}
+@media (max-width: 1200px) {
+  .weather-cards .card {
+    width: calc(100% / 3 - 15px);
+  }
+}
+@media (max-width: 950px) {
+  .weather-input {
+    width: 450px;
+  }
+  .weather-cards .card {
+    width: calc(100% / 2 - 10px);
+  }
+}
+@media (max-width: 750px) {
+  h1 {
+    font-size: 1.45rem;
+    padding: 16px 0;
+  }
+  .container-Weather {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+  .weather-input {
+    width: 100%;
+  }
+  .weather-data h2 {
+    font-size: 1.35rem;
+  }
+}
+
+
+/* Weather Section End home.html*/
+
+
+
+/* Footer Start  home.html*/
+#footer{
+  width: 100%;
+ 
+  text-align: center;
+  background: #f9f9f9;
+}
+#footer h1{
+  font-weight: 600;
+  padding-top: 30px;
+  text-shadow: 0px 0px 1px black;
+}
+#footer h1 span{
+  color: var(--towColor);
+}
+
+#footer p{
+  font-weight: 500;
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.social-links i{
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  background: black;
+  color: white;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+.social-links i:hover{
+  background:var(--towColor);
+}
+/* Footer End home.html */
+
+
+
+
+/* Hotels style Start*/
+
+.container-hotels {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 60px 30px;
+  padding: 20px 20px;
+}
+
+.container-hotels .card-hotels {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 350px;
+  max-width: 100%;
+  height: 300px;
+  background: #FFF;
+  border-radius: 20px;
+  transition: 0.5s;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+
+}
+
+
+
+.container-hotels .card-hotels:hover {
+  height: 400px;
+}
+
+.container-hotels .card-hotels .img-box {
+  position: absolute;
+  top: 20px;
+  width: 300px;
+  height: 220px;
+  background: #333;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container-hotels .card-hotels:hover .img-box {
+  top: -100px;
+  scale: 0.75;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.container-hotels .card-hotels .img-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.container-hotels .card-hotels .content {
+  position: absolute;
+  top: 252px;
+  width: 100%;
+  height: 35px;
+  padding: 0 30px;
+  text-align: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.container-hotels .card-hotels:hover .content {
+  top: 130px;
+  height: 250px;
+}
+
+.container-hotels .card-hotels .content h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--clr);
+}
+
+.container-hotels .card-hotels .content p {
+  color: #333;
+}
+
+.container-hotels .card-hotels .content a {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  padding: 12px 25px;
+  text-decoration: none;
+  background: var(--clr);
+  color: #FFF;
+  font-weight: 500;
+}
+
+.container-hotels .card-hotels .content a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 480px) {
+  .container-hotels.card-hotels {
+      width: 230px;
+      border-radius: 15px;
+  }
+
+  .container-hotels .card-hotels .img-box {
+      width: 185px;
+      border-radius: 10px;
+  }
+
+  .container-hotels .card-hotels .content p {
+      font-size: 0.8rem;
+  }
+
+  .container-hotels .card-hotels .content a {
+      font-size: 0.9rem;
+  }
+}
+/* Hotels style End*/
+
+
+
+
+
+
+
+/* Food style Start*/
+
+
+.food {
+  
+  margin-top: 50px;
+  padding: 30px;
+  overflow:auto;
+  height: 700px;
+  background-color: gainsboro;
+ 
+}
+
+.food .container {
+  max-width: 1100px;
+
+}
+
+
+
+.content{
+  text-align: center;
+}
+#filter-buttons button {
+  border-radius: 3px;
+  background: #fff;
+  border-color: transparent;
+
+}
+
+#filter-buttons button:hover {
+  background: #ddd;
+}
+
+#filter-buttons button.active {
+  color: #fff;
+  background: #6c757d;
+}
+
+#filterable-cards .card {
+  width: 20rem;
+  border: 2px solid transparent;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  
+
+}
+
+#filterable-cards .card.hide {
+  display: none;
+}
+
+
+
+.card-body{
+  background: transparent;
+}
+.card-body h3{
+  font-size: 25px;
+  font-weight: 600;
+}
+.card-body p{
+  font-size: 15px;
+}
+.rating1 i {
+  color:  #ffa500;
+}
+
+  .card-body .aa{
+    
+    border-radius: 5px;
+    color:var(--mainColor);
+    letter-spacing: 2px;
+    font-weight: 550;
+    transition: 0.5s ease;
+    cursor: pointer;
+    padding: 4px 6px;
+    transition: 0.5s;
+  }
+
+
+.card-body .aa:hover{
+   padding: 4px 20px;
+   color:var(--mainColor);
+  
+}
+
+@media (max-width: 600px) {
+  #filterable-cards {
+    justify-content: center;
+  }
+}
+
+
+/* Food style End*/
+
+
+
+/*Tourist places Section Start */
+.Tourist-places{
+  background-color: #212428;
+  overflow-x: clip;
+  height: 700px;
+  padding: 20px 0;
+  margin: 20px 0;
+}
+ul {
+  list-style: none;
+  
+  padding-inline-start:0%;
+}
+
+.tabs1 {
+ 
+  height: 100px;
+
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  box-shadow: 10px 10px 19px var(--towColor), -10px -10px 19px #262a2e;
+  overflow: hidden;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  width: auto;
+        margin: 9px 12px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: stretch;
+        justify-content: center
+}
+
+.tabs1 li {
+  background-color:#212428 ;
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c4cfde;
+  font-family: 'Poppins', sans-serif;
+  transition: .5s;
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  cursor: pointer;
+  text-align: center;
+}
+
+.tabs1 li:hover {
+  background: linear-gradient(145deg, #1e2024, #23272b);
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  color: #08f900;
+  position: relative;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.contents {
+  width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.box {
+  gap: 20px;
+  background: linear-gradient(145deg, #1e2024, #23272b);
+  box-shadow: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  animation: moving 1s ease;
+  -webkit-animation: moving 1s ease;
+}
+
+.box img {
+  width: 50%;
+  height: 300px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.box h3 {
+  color: #c4cfde;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.box p {
+  color: #c4cfde;
+  opacity: .5;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+}
+
+.show {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes moving {
+  from {
+      transform: translateX(-50px);
+      -webkit-transform: translateX(-50px);
+      -moz-transform: translateX(-50px);
+      -ms-transform: translateX(-50px);
+      -o-transform: translateX(-50px);
+      opacity: 0;
+  }
+
+  to {
+      transform: translateX(0px);
+      -webkit-transform: translateX(0px);
+      -moz-transform: translateX(0px);
+      -ms-transform: translateX(0px);
+      -o-transform: translateX(0px);
+      opacity: 1;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .Tourist-places {
+    height: 650px;
+  }
+}
+
+
+
+@media (max-width: 990px) {
+  .Tourist-places {
+    height: 750px;
+    
+  }
+   
+  .box{
+    height: 500px;
+    width: 100%;
+    ;
+    
+  }
+
+  .contents{
+    width: 100%;
+    margin: 40px 20px 0 20px;
+  }
+
+  .box p{
+margin-right: 15px;
+  }
+  .tabs1{
+    width: auto;
+    margin: 9px 12px;
+  }
+
+
+  .tabs1 li{
+    
+    font-size: 15px;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 766px) {
+  .Tourist-places {
+    height: 700px;
+    
+  }
+
+  .box{
+    height: 400px;
+  }
+   .box img{
+    height: 300px;
+    margin-top: 20px;
+   }
+
+   .box p{
+    overflow:auto;
+    height: 300px;
+      }
+      .box h3{
+        font-size: 1.5rem;
+      }
+}
+
+@media (max-width: 510px) {
+  .Tourist-places {
+    height: 1000px;
+    
+  }
+  .box {
+    gap: 30px 30px;
+    flex-wrap: wrap;
+    padding: 0 10px;
+  }
+  .box h3{
+    font-size: 1rem;
+    top: initial;
+    bottom: 0px;
+    
+  }
+
+  .box img{
+    height: 270px;
+    width: 350px;
+   padding: 0 40px  0 1px;
+  }
+
+
+  .tabs1 li{
+    font-size: 10px;
+  }
+}
+
+/*Tourist places Section End */
+
+
+/* Markets style Start*/
+
+.Markets{
+  background-color: #ffffff;
+  margin-top: 30px;
+  padding: 20px 0;
+}
+
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.wrapper img{
+ width: 50px;
+ height: 50px ;
+ position: relative;
+}
+
+.card-Markets {
+  position: relative;
+  width: 300px;
+  height: 500px;
+  background: #000;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+
+  
+}
+
+
+
+.poster {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.poster::before {
+  content: '';
+  position: absolute;
+  bottom: -45%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: .3s;
+}
+
+.card-Markets:hover .poster::before {
+  bottom: 0;
+}
+
+.poster img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: .3s;
+}
+
+.card-Markets:hover .poster img {
+  transform: scale(1.1);
+}
+
+
+
+.details1 {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  height: auto;
+  padding: 1.5em 1.5em 2em;
+  background: #000a;
+  backdrop-filter: blur(16px) saturate(120%);
+  transition: .3s;
+  color: #fff;
+  z-index: 2;
+}
+
+.card-Markets:hover .details1 {
+  bottom: 0;
+}
+
+.details1 h1,
+.details1 h2 {
+  font-weight: 700;
+}
+
+.details1 h1 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.details1 h2 {
+  font-weight: 400;
+  font-size: 1em;
+  margin-bottom: 10px;
+  opacity: .6;
+}
+
+.details1 .rating1 {
+  position: relative;
+  margin-bottom: 15px;
+  display: flex;
+  gap: .25em;
+}
+
+.details1 .rating1 i {
+  color: #e3c414;
+}
+
+.details1 .rating1 span {
+  margin-left: 0.25em;
+}
+
+.details1 .desc {
+  color: #fff;
+  opacity: .8;
+  line-height: 1.5;
+  margin-bottom: 1em;
+}
+
+.details1 .cast h3 {
+  margin-bottom: .5em;
+}
+
+.details1 .cast ul {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+  width: 100%;
+}
+
+/* Markets style End*/
+
+
+/* img places  style Start*/
+.wrapper_places{
+  width: 100%;
+  margin: 40px 0;
+  background-color: #212428;
+  height: 450px;
+}
+.carousel{
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 30px;
+}
+.carousel .card_places{
+  color: #fff;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 250px;
+  font-size: 90px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+
+.carousel img{
+  margin-top: 20px;
+  border-radius: 14px;
+  height: 300px;
+  width: 300px;
+  
+}
+.owl-dots{
+  text-align: center;
+  margin-top: 40px;
+}
+.owl-dot{
+  height: 15px;
+  width: 45px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 14px;
+  border: 2px solid var(--towColor)!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: var(--towColor)!important;
+}
+
+/* img places  style End*/
+
+
+
+
+
+
+
